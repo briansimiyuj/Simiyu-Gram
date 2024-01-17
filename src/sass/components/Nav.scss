@@ -18,13 +18,17 @@ nav{
     
     
     .nav-menu{
-        background: red;
         padding: 1rem;
 
         li{
             width: 100%;
             @include flexBox;
-            height: 3rem;
+            height: 6rem;
+
+            a{
+                color: #000;
+                @include flexBox;
+            }
 
             .menu-icon{
                 font-size: 2rem;
@@ -37,6 +41,11 @@ nav{
 
             &.notification{
                 margin-left: 1.5rem;
+            }
+
+            &:hover{
+                background: #ccc;
+                transition: background .5s ease-in-out;
             }
         }
 
