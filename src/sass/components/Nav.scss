@@ -1,19 +1,44 @@
 nav{
-    background: red;
     height: 100%;
     width: 25%;
 
     .logo{
         @include flexBox;
-
+        
         &-icon{
             font-size: 5rem;
             margin-right: 1rem;
         }
-
+        
         &-text{
             font-size: 1.5rem;
             font-style: italic;
         }
+    }
+    
+    
+    .nav-menu{
+        background: red;
+        padding: 1rem;
+
+        li{
+            width: 100%;
+            @include flexBox;
+            height: 3rem;
+
+            .menu-icon{
+                font-size: 2rem;
+                margin-right: 3rem;
+            }
+
+            .menu-text{
+                margin-left: 2rem;
+            }
+
+            &.notification{
+                margin-left: 1.5rem;
+            }
+        }
+
     }
 }
