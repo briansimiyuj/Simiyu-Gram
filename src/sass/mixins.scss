@@ -5,6 +5,6 @@
 }
 
 @mixin flexBoxColumn{
-    @extend flexBox;
+    @extend flexBox !optional;
     flex-flow: column;
 }
