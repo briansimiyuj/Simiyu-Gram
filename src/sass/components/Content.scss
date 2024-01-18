@@ -1,0 +1,17 @@
+.content{
+    @include flexBoxColumn;
+    width: 75%;
+
+    .profile-info{
+        @include flexBox;
+
+        .profile-pic{
+            width: 8rem;
+            height: 8rem;
+            
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+}
