@@ -1,6 +1,8 @@
 .content{
     @include flexBoxColumn;
     width: 75%;
+    margin-top: 25rem;
+    margin-left: 5rem;
 
     .profile-info{
         @include flexBox;
