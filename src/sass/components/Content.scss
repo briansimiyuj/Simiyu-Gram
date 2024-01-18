@@ -4,6 +4,8 @@
 
     .profile-info{
         @include flexBox;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2rem;
 
         .profile-pic{
             width: 8rem;
