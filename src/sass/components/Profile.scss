@@ -1,0 +1,32 @@
+.profile-info{
+    @include flexBox;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+
+    .profile-pic{
+        width: 8rem;
+        height: 8rem;
+        
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    .profile-text{
+        margin-left: 3rem;
+        font-size: 1.3rem;
+        @include flexBoxColumn;
+    
+        .profile-names{
+            margin: 2rem 0;
+    
+            .profile-name{
+                margin-bottom: 1rem;
+            }
+        }
+    
+        .profile-bio{
+            width: 70%;
+        }
+    }
+}

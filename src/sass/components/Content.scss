@@ -4,26 +4,11 @@
     margin-top: 15rem;
     margin-left: 5rem;
 
-    .profile-info{
-        @include flexBox;
-        border-bottom: 1px solid #ccc;
-        padding-bottom: 2rem;
-
-        .profile-pic{
-            width: 8rem;
-            height: 8rem;
-            
-            img{
-                border-radius: 50%;
-            }
-        }
-    }
-
     @include lg{
        width: 100%;
        margin: 4rem 3rem 0 3rem;
     }
 }
 
-@import "ProfileText";
+@import "Profile";
 @import "ContentMedia";
