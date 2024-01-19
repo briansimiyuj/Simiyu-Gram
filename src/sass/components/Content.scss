@@ -1,7 +1,7 @@
 .content{
     @include flexBoxColumn;
     width: 75%;
-    margin-top: 25rem;
+    margin-top: 15rem;
     margin-left: 5rem;
 
     .profile-info{
@@ -17,6 +17,11 @@
                 border-radius: 50%;
             }
         }
+    }
+
+    @include lg{
+       width: 100%;
+       margin: 4rem 3rem 0 3rem;
     }
 }
 

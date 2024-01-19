@@ -7,5 +7,24 @@
     .content-pic{
         width: 20rem;
         height: 20rem;
+
+        @include lg{
+            width: 15rem;
+            height: 15rem;
+        }
+
+        @include md{
+           width: 10rem;
+           height: 10rem;
+        }
+
+        @include sm{
+           width: 6rem;
+           height: 6rem;
+        }
+    }
+
+    @include lg{
+       gap: 0;
     }
 }
