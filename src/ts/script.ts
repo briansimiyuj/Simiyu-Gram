@@ -1,17 +1,16 @@
-import initializeSelectPic from './select.js'
+const desktopUploadLink = document.querySelector("#desktopUploadLink") as HTMLAnchorElement,
+      mobileUploadLink = document.querySelector("#mobileUploadLink") as HTMLAnchorElement,
+      fileInput = document.querySelector(".fileInput") as HTMLInputElement
 
 
-const uploadLinks = document.querySelectorAll(".uploadLink") as NodeListOf<HTMLAnchorElement>;
+desktopUploadLink.addEventListener("click", () =>{
 
-uploadLinks.forEach((link) =>{
+    fileInput.click()
 
-    const fileInput = document.querySelector(".fileInput") as HTMLInputElement,
-          selectPic = initializeSelectPic()
+})
 
-    link.addEventListener("click", () =>{
-    
-        fileInput.click()
-    
-    })
-  
+mobileUploadLink.addEventListener("click", () =>{
+
+    fileInput.click()
+
 })
