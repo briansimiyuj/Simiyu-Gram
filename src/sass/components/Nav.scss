@@ -49,6 +49,10 @@
             }
         }
 
+        .fileInput{
+            display: none;
+        }
+
     }
     
     @include lg{
@@ -87,6 +91,10 @@
                         font-size: 2.5rem;
                     }
                 }
+            }
+
+            .fileInput{
+                display: none;
             }
         }    
     }
