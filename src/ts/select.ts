@@ -60,6 +60,10 @@ const initializeSelectPic = () =>{
       
       container.appendChild(infoContainer)
 
+      const body = document.querySelector("body") as HTMLBodyElement
+
+      body.classList.add("infoContainerOverlay")
+
     }
   
     
