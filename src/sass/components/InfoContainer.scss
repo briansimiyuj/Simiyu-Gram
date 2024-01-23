@@ -3,10 +3,11 @@
     width: 45rem;
     height: 45rem;
     position: absolute;
-    background: red;
+    background: #fff;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 1rem;
     z-index: 1000;
 
     .selectImage{
