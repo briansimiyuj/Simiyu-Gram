@@ -1,4 +1,5 @@
 import initializeSelectPic from './select.js'
+import initializeEditPic from './edit.js'
 
 
 const desktopUploadLink = document.querySelector("#desktopUploadLink") as HTMLAnchorElement,
@@ -10,7 +11,8 @@ desktopUploadLink.addEventListener("click", () =>{
 
     fileInput.click()
 
-    const selectPic = initializeSelectPic()
+    const selectPic = initializeSelectPic(),
+          editPic = initializeEditPic()  
 
 })
 
@@ -18,6 +20,7 @@ mobileUploadLink.addEventListener("click", () =>{
 
     fileInput.click()
 
-    const selectPic = initializeSelectPic()
+    const selectPic = initializeSelectPic(),
+          editPic =   initializeEditPic()
 
 })
