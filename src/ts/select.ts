@@ -132,6 +132,10 @@ const initializeSelectPic = () =>{
         container.appendChild(infoContainer)
 
         wrapper.infoContainer = infoContainer
+
+        const event = new Event("infoContainerReady");
+          
+        document.dispatchEvent(event)
         
       }
   
