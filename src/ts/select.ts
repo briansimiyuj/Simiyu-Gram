@@ -4,14 +4,28 @@ type SelectPicState ={
     info: string | null
 
 }
+
+type ContainerWrapper ={
+  
+  infoContainer: HTMLDivElement | null
+
+}
   
 const initializeSelectPic = () =>{
+
+  let iContainer: HTMLDivElement | null = null
 
     const selectPicState: SelectPicState ={
 
       file: null,
       error: null,
       info: null,
+
+    }
+
+    const wrapper: ContainerWrapper ={
+
+      infoContainer: null
 
     }
   
@@ -117,7 +131,9 @@ const initializeSelectPic = () =>{
 
         container.appendChild(infoContainer)
 
-    }
+        wrapper.infoContainer = infoContainer
+        
+      }
   
     
     const fileInput = document.querySelector('.fileInput')
@@ -130,7 +146,9 @@ const initializeSelectPic = () =>{
   
     return{
 
-      getSelectPicState: () => selectPicState
+      getSelectPicState: () => selectPicState,
+
+      getInfoContainer: () => wrapper.infoContainer
 
     }
 
