@@ -50,19 +50,68 @@ const initializeSelectPic = () =>{
   
     const updateView = () =>{
 
-      const container = document.querySelector(".container") as HTMLDivElement
+      document.body.classList.add("infoContainerOverlay")
 
+      addInfoContainer()
+
+    }
+
+
+    const addInfoContainer = () =>{
+    
       const infoContainer = document.createElement("div")
 
       infoContainer.className = "infoContainer"
 
-      infoContainer.textContent =  selectPicState.error || selectPicState.info
+      const buttons = document.createElement("div")
+
+      buttons.className = "buttons"
+
+      const leftButton = document.createElement("button")
+
+      leftButton.innerText = "Back"
+
+      const rightButton = document.createElement("button")
+
+      rightButton.innerText = "Next"
+
+      buttons.append(leftButton, rightButton)
+
+      const selectImage = document.createElement("div")
+
+      selectImage.className = "selectImage"
+
+      const img = document.createElement("img")
+
+      if(selectPicState.file){
+
+        const reader = new FileReader()
+
+        reader.onload = (e) =>{
+
+          if(e.target && typeof e.target.result === 'string'){
+            
+            img.src = e.target.result
+
+          }
+
+        }
+
+        reader.readAsDataURL(selectPicState.file);
+
+      }
+
+        img.alt = 'Selected Image Preview'
+
       
-      container.appendChild(infoContainer)
 
-      const body = document.querySelector("body") as HTMLBodyElement
+        selectImage.appendChild(img)
 
-      body.classList.add("infoContainerOverlay")
+        infoContainer.append(buttons, selectImage)
+
+        const container = document.querySelector(".container") as HTMLDivElement
+
+        container.appendChild(infoContainer)
 
     }
   
@@ -81,6 +130,6 @@ const initializeSelectPic = () =>{
 
     }
 
-}
+  }
 
 export default initializeSelectPic
