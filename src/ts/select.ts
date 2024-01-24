@@ -69,9 +69,13 @@ const initializeSelectPic = () =>{
 
       const leftButton = document.createElement("button")
 
+      leftButton.id = "leftButton"
+
       leftButton.innerText = "Back"
 
       const rightButton = document.createElement("button")
+
+      rightButton.id = "rightButton"
 
       rightButton.innerText = "Next"
 
