@@ -19,8 +19,65 @@ const initializeEditPic = () =>{
     rightButton.addEventListener("click", () =>{
 
       container.removeChild(infoContainer)
+
+      addEditPic()
     
     })
+
+
+
+    const addEditPic = () =>{
+    
+      const editPic = document.createElement("div")
+
+      editPic.className = "editPic"
+
+      const buttons = document.createElement("div")
+
+      buttons.className = "buttons"
+
+      const rightButton = document.createElement("button")
+
+      rightButton.id = "rightButton"
+
+      const leftButton = document.createElement("button")
+
+      leftButton.id = "leftButton"
+
+      buttons.append(leftButton, rightButton)
+
+      const commentSection = document.createElement("div")
+
+      commentSection.className = "comment-section"
+
+      const photo = document.createElement("div")
+
+      photo.className = "photo"
+
+      const img = document.createElement("img")
+
+      photo.appendChild(img)
+
+
+      const comments = document.createElement("div")
+
+      comments.className = "comments"
+
+      const form = document.createElement("form")
+
+      const textarea = document.createElement("textarea")
+
+      form.appendChild(textarea)
+
+      comments.appendChild(form)
+
+      commentSection.append(photo, comments)
+
+      editPic.append(buttons, commentSection)
+
+      container.appendChild(editPic)
+    
+    }
   
   })
 
