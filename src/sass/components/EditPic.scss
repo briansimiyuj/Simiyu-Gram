@@ -1,0 +1,30 @@
+.editPic{
+    @extend .infoContainer;
+    background: #fff;
+
+    .comments-section{
+        margin-top: 5rem;
+        @include flexBox;
+        justify-content: space-around;
+
+        .photo{
+            width: 16rem;
+            height: 16rem;
+            
+        }
+
+        form{
+            width: 100%;
+            height: 100%;
+            
+            textarea{
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid #ccc;
+                color: #000;
+                font-size: 1.3rem;
+                margin-left: 3rem;
+            }
+        }
+    }
+}
