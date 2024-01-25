@@ -6,21 +6,18 @@ const desktopUploadLink = document.querySelector("#desktopUploadLink") as HTMLAn
       mobileUploadLink = document.querySelector("#mobileUploadLink") as HTMLAnchorElement,
       fileInput = document.querySelector(".fileInput") as HTMLInputElement
 
+      const selectPic = initializeSelectPic(),
+            editPic =   initializeEditPic()
+
 
 desktopUploadLink.addEventListener("click", () =>{
 
-    fileInput.click()
-
-    const selectPic = initializeSelectPic(),
-          editPic = initializeEditPic()  
+    fileInput.click()  
 
 })
 
 mobileUploadLink.addEventListener("click", () =>{
 
     fileInput.click()
-
-    const selectPic = initializeSelectPic(),
-          editPic =   initializeEditPic()
 
 })
