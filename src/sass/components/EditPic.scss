@@ -1,16 +1,77 @@
 .editPic{
-    @extend .infoContainer;
+    width: 45rem;
+    height: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1rem;
     background: #fff;
+    z-index: 1000;  
 
+    @include lg{
+        top: 22%;
+        width: 100%;
+    }
+    
+    @include md{
+        height: 30rem;
+        top: 15%;
+    }
+
+    .buttons{
+        margin-top: 1rem;
+        @include flexBox;
+        justify-content: space-between;
+        height: 4rem;
+
+        button{
+            margin: 0 2rem;
+            font-size: 2.5rem;
+            background: none;
+            border: none;
+            color: blue;
+            cursor: pointer;
+            
+            @include md{
+               font-size: 1.8rem;
+            }
+        }
+    }
+    
     .comments-section{
-        margin-top: 5rem;
         @include flexBox;
         justify-content: space-around;
+        margin-top: 2rem;
+
+        @include md{
+           height: 20rem;
+        }
+
+        @include sm{
+           @include flexBoxColumn;
+           margin-top: 4rem;
+           justify-content: center;
+        }
 
         .photo{
-            width: 16rem;
-            height: 16rem;
-            
+            width: 15rem;
+            height: 15rem;
+
+            @include lg{
+               width: 22rem;
+               height: 22rem;
+            }
+
+            @include md{
+               width: 15rem;
+               height: 15rem;
+            }
+
+            @include sm{
+               width: 9rem;
+               height: 9rem;
+            }
         }
 
         form{
@@ -19,11 +80,19 @@
             
             textarea{
                 border: none;
+                outline: none;
                 background: transparent;
                 border-bottom: 1px solid #ccc;
                 color: #000;
                 font-size: 1.3rem;
                 margin-left: 3rem;
+                padding: 8rem 0;
+
+                @include sm{
+                    padding: 5rem 0;
+                    margin-left: 0;
+                    margin-top: 2rem;
+                }
             }
         }
     }
