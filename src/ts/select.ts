@@ -137,16 +137,11 @@ const initializeSelectPic = () =>{
 
         wrapper.infoContainer = infoContainer
 
-        const event = new Event("infoContainerReady");
+        const event = new Event("infoContainerReady")
           
-        
-        wrapper.img.addEventListener("load", () =>{
-          
-          document.dispatchEvent(event)
-
-        })
-        
-      }
+        document.dispatchEvent(event)
+      
+      }  
   
     
     const fileInput = document.querySelector('.fileInput')
