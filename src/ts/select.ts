@@ -8,6 +8,7 @@ type SelectPicState ={
 type ContainerWrapper ={
   
   infoContainer: HTMLDivElement | null
+  img: HTMLImageElement
 
 }
   
@@ -25,7 +26,8 @@ const initializeSelectPic = () =>{
 
     const wrapper: ContainerWrapper ={
 
-      infoContainer: null
+      infoContainer: null,
+      img: new Image
 
     }
   
@@ -101,6 +103,8 @@ const initializeSelectPic = () =>{
 
       const img = document.createElement("img")
 
+      wrapper.img = new Image
+
       if(selectPicState.file){
 
         const reader = new FileReader()
@@ -109,7 +113,7 @@ const initializeSelectPic = () =>{
 
           if(e.target && typeof e.target.result === 'string'){
             
-            img.src = e.target.result
+            wrapper.img.src = e.target.result
 
           }
 
@@ -119,11 +123,11 @@ const initializeSelectPic = () =>{
 
       }
 
-        img.alt = 'Selected Image Preview'
+        wrapper.img.alt = 'Selected Image Preview'
 
       
 
-        selectImage.appendChild(img)
+        selectImage.appendChild(wrapper.img)
 
         infoContainer.append(buttons, selectImage)
 
@@ -135,7 +139,12 @@ const initializeSelectPic = () =>{
 
         const event = new Event("infoContainerReady");
           
-        document.dispatchEvent(event)
+        
+        wrapper.img.addEventListener("load", () =>{
+          
+          document.dispatchEvent(event)
+
+        })
         
       }
   
@@ -152,7 +161,9 @@ const initializeSelectPic = () =>{
 
       getSelectPicState: () => selectPicState,
 
-      getInfoContainer: () => wrapper.infoContainer
+      getInfoContainer: () => wrapper.infoContainer,
+
+      getImage: () => wrapper.img
 
     }
 
