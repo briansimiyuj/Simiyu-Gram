@@ -40,15 +40,19 @@ const initializeEditPic = () =>{
 
       rightButton.id = "rightButton"
 
+      rightButton.innerText = "Next"
+
       const leftButton = document.createElement("button")
 
       leftButton.id = "leftButton"
+
+      leftButton.innerText = "Back"
 
       buttons.append(leftButton, rightButton)
 
       const commentSection = document.createElement("div")
 
-      commentSection.className = "comment-section"
+      commentSection.className = "comments-section"
 
       const photo = document.createElement("div")
 
@@ -66,6 +70,8 @@ const initializeEditPic = () =>{
       const form = document.createElement("form")
 
       const textarea = document.createElement("textarea")
+
+      textarea.placeholder = "Add captions here"
 
       form.appendChild(textarea)
 
