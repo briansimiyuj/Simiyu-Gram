@@ -158,7 +158,9 @@ const initializeSelectPic = () =>{
 
       getInfoContainer: () => wrapper.infoContainer,
 
-      getImage: () => wrapper.img
+      getImage: () => wrapper.img,
+
+      getInfoContainerDiv: () => addInfoContainer
 
     }
 
