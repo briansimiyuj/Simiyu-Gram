@@ -1,5 +1,6 @@
 import initializeSelectPic from './select.js'
 import initializeEditPic from './edit.js'
+import initializeUploadPic from './upload.js'
 
 
 const desktopUploadLink = document.querySelector("#desktopUploadLink") as HTMLAnchorElement,
@@ -7,7 +8,8 @@ const desktopUploadLink = document.querySelector("#desktopUploadLink") as HTMLAn
       fileInput = document.querySelector(".fileInput") as HTMLInputElement
 
       const selectPic = initializeSelectPic(),
-            editPic =   initializeEditPic()
+            editPic =   initializeEditPic(),
+            uploadPic = initializeUploadPic()
 
 
 desktopUploadLink.addEventListener("click", () =>{
