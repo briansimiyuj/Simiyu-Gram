@@ -85,6 +85,10 @@ const initializeEditPic = () =>{
       editPic.append(buttons, commentSection)
 
       container.appendChild(editPic)
+
+      const event = new Event("editPicReady")
+
+      document.dispatchEvent(event)
     
     }
   

@@ -1,7 +1,11 @@
 const initializeUploadPic = () =>{
 
-  console.log('working')
+  document.addEventListener("editPicReady", () =>{
+  
+      console.log('working')
+  
+  })
 
-};
+}
 
 export default initializeUploadPic
