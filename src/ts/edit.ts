@@ -5,7 +5,8 @@ const initializeEditPic = () =>{
       const leftButton = document.querySelector("#leftButton") as HTMLButtonElement,
             rightButton = document.querySelector("#rightButton") as HTMLButtonElement,
             container = document.querySelector(".container") as HTMLDivElement,
-            infoContainer = document.querySelector(".infoContainer") as HTMLDivElement
+            infoContainer = document.querySelector(".infoContainer") as HTMLDivElement,
+            selectImage = document.querySelector(".selectImage img") as HTMLImageElement
 
     leftButton.addEventListener("click", () =>{
     
@@ -59,6 +60,8 @@ const initializeEditPic = () =>{
       photo.className = "photo"
 
       const img = document.createElement("img")
+
+      img.src = selectImage.src
 
       photo.appendChild(img)
 
