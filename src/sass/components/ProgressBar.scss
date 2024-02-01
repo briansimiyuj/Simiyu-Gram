@@ -1,0 +1,12 @@
+.progress-container{
+    @include flexBox;
+
+    .progress-bar{
+        width: 24rem;
+        border: 2px solid red;
+
+        @include sm{
+           width: 18rem;
+        }
+    }
+}
