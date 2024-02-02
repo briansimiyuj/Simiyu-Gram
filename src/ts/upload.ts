@@ -1,3 +1,4 @@
+import { projectStorage } from '../../config.js';
 import initializeSelectPic from './select.js'
 
 const initializeUploadPic = () =>{
