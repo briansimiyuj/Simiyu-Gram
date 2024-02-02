@@ -1,6 +1,6 @@
 import { projectStorage } from '../../firebase/config.js';
 import initializeSelectPic from './select.js'
-
+import { ref } from 'firebase/storage'
 const initializeUploadPic = () =>{
 
   document.addEventListener("editPicReady", () =>{
@@ -50,6 +50,10 @@ const initializeUploadPic = () =>{
       progressContainer.appendChild(progressBar)
 
       container.appendChild(progressContainer)
+
+      const event = new Event("progressContainer")
+
+      document.dispatchEvent(event)
     
     }
 
@@ -57,8 +61,6 @@ const initializeUploadPic = () =>{
     const uploadPic = (photo: HTMLImageElement) =>{
     
       const photoName = photo.getAttribute("data-name")
-
-      console.log(photoName)
 
     }
   
