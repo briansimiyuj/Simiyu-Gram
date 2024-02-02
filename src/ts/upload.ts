@@ -1,4 +1,4 @@
-import { projectStorage } from '../../config.js';
+import { projectStorage } from '../../firebase/config.js';
 import initializeSelectPic from './select.js'
 
 const initializeUploadPic = () =>{
@@ -10,11 +10,10 @@ const initializeUploadPic = () =>{
           leftButton = document.querySelector("#leftButton") as HTMLButtonElement,
           rightButton = document.querySelector("#rightButton") as HTMLButtonElement,
           container = document.querySelector(".container") as HTMLDivElement,
-          editPic = document.querySelector(".editPic") as HTMLDivElement
+          editPic = document.querySelector(".editPic") as HTMLDivElement,
+          photo = document.querySelector(".photo img") as HTMLImageElement 
 
     leftButton.addEventListener("click", () =>{
-       
-        const photo = document.querySelector(".photo img") as HTMLImageElement 
     
         container.removeChild(editPic)
 
@@ -27,7 +26,9 @@ const initializeUploadPic = () =>{
     })
 
 
-    rightButton.addEventListener("click", () =>{
+    rightButton.addEventListener("click", () =>{    
+
+      uploadPic(photo)
     
       addProgressBar()
     
@@ -50,6 +51,15 @@ const initializeUploadPic = () =>{
 
       container.appendChild(progressContainer)
     
+    }
+
+
+    const uploadPic = (photo: HTMLImageElement) =>{
+    
+      const photoName = photo.getAttribute("data-name")
+
+      console.log(photoName)
+
     }
   
   })
