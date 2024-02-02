@@ -138,6 +138,12 @@ const initializeSelectPic = () =>{
         wrapper.infoContainer = infoContainer
 
         const event = new Event("infoContainerReady")
+
+        if(selectPicState.file?.name){
+
+          wrapper.img.setAttribute("data-name", selectPicState.file.name)
+
+        }
           
         document.dispatchEvent(event)
       

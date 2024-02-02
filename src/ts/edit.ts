@@ -8,6 +8,9 @@ const initializeEditPic = () =>{
             infoContainer = document.querySelector(".infoContainer") as HTMLDivElement,
             selectImage = document.querySelector(".selectImage img") as HTMLImageElement
 
+            // console.log(selectImage.getAttribute('data-name'))
+
+
     leftButton.addEventListener("click", () =>{
     
       container.removeChild(infoContainer)    
@@ -61,7 +64,15 @@ const initializeEditPic = () =>{
 
       const img = document.createElement("img")
 
-      img.src = selectImage.src
+      img.src = selectImage.src 
+
+      const dataName = selectImage.getAttribute("data-name")
+
+      if(dataName){
+
+        img.setAttribute("data-name", dataName)
+
+      }
 
       photo.appendChild(img)
 
